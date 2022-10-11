@@ -1,0 +1,374 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.wrapper {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+@media screen and (max-width:1300px) {
+    .wrapper {
+        margin: 0px 40px;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .wrapper {
+        margin: 0px 20px;
+    }
+
+    .model {
+        width: 80%;
+    }
+
+    .image-slider {
+        height: 30vh;
+
+    }
+}
+
+/* Header */
+
+header {
+    /* position: relative; */
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 40;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: #F9FAFB;
+    color: #374151;
+    font-weight: 300;
+    /* box-shadow: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1)) drop-shadow(0 1px 1px rgba(0, 0, 0, 0.06)); */
+}
+
+header>div {
+    display: flex;
+}
+
+.logo-container {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+}
+
+.logo-container img {
+    display: block;
+    width: 8rem;
+}
+
+.desktop-nav {
+    display: none;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.desktop-nav ul {
+    display: flex;
+}
+
+.desktop-nav ul a {
+    margin-left: 1.25rem;
+    margin-right: 1.25rem;
+}
+
+.desktop-nav ul a:hover {
+    color: #3366ff;
+}
+
+.right-nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.signIn {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    color: #ffffff;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    border-radius: 0.125rem;
+}
+
+.menu-icon-conatiner {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
+}
+
+.menu-icon-conatiner img {
+    height: 2rem;
+}
+
+#mobile-nav {
+    display: none;
+    position: absolute;
+    right: 1rem;
+    top: 6rem;
+    background-color: #ffffff;
+}
+
+/* .mobile-nav a {
+    display: block;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+} */
+
+/* .mobile-nav a:hover {
+    color: #ffffff;
+    background-color: #3366ff;
+} */
+
+#mobile-nav a {
+    display: block;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+#mobile-nav a:hover {
+    color: #ffffff;
+    background-color: #3366ff;
+}
+
+.signin-btn {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    color: #ffffff;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    border-radius: 0.125rem;
+    background-color: #3366ff;
+}
+
+@media (min-width: 640px) {
+    .signin-btn {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+
+@media (min-width: 768px) {
+    .logo-container img {
+        width: 11rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .desktop-nav {
+        display: flex;
+    }
+
+    .menu-icon-conatiner {
+        display: none;
+    }
+
+    #mobile-nav {
+        display: none;
+    }
+}
+
+/* Animated Banner */
+
+.animated-banner {
+    display: flex;
+    align-items: center;
+    background-image: url(https://cohandsindia.com/landing-bg.jpeg);
+    background-size: 150vw 150vh;
+    background-position: 0% 0%;
+    animation-name: animateBanner;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+    height: 100vh;
+}
+
+.animated-banner>div {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+@keyframes animateBanner {
+    from {
+        background-position: 0% 0%;
+    }
+
+    to {
+        background-position: 100% 100%;
+    }
+}
+
+.banner-heading {
+    color: #ffffff;
+    font-size: 1.875rem;
+    font-weight: 900;
+}
+
+.banner-btn {
+    display: inline-block;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-top: 1rem;
+    color: #ffffff;
+    border-radius: 9999px;
+    border: 2px solid #ffffff;
+    background-color: teal;
+}
+
+@media (min-width: 640px) {
+    .animated-banner>div {
+        margin-left: 3.5rem;
+        margin-right: 3.5rem;
+    }
+
+    .banner-heading {
+        font-size: 2.25rem;
+        line-height: 2.5rem;
+    }
+
+    .banner-btn {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .banner-heading {
+        font-size: 3rem;
+        line-height: 1;
+    }
+
+    .banner-btn {
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
+        margin-top: 2rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .banner-heading {
+        font-size: 3.75rem;
+        line-height: 1;
+    }
+}
+
+/* Funded clusters */
+
+.cards-conatiner {
+    color: #374151;
+    background-color: #f0fdfa;
+}
+
+.cards-conatiner>div {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+@media (min-width: 640px) {
+    .cards-conatiner>div {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+}
+
+/* Gllaey slider */
+
+.model-parent {
+    position: relative;
+}
+
+.model {
+    background-color: lavender;
+    width: 60%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 333;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 1);
+    display: none;
+}
+
+.modelDisplay {
+    display: block;
+}
+
+.image-slider {
+    display: flex;
+    height: 45vh;
+}
+
+.image-shower {
+    flex-grow: 1;
+    overflow: hidden;
+    width: 80%;
+    height: auto;
+}
+
+.image-shower img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.btnContainer {
+    display: flex;
+    align-items: center;
+    width: 10%;
+    justify-content: center;
+}
+
+.image-slider button {
+    font-weight: bold;
+    border: 1px solid black;
+    width: 40px;
+    height: 40px;
+}
+
+.hide-btn {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    background-color: black;
+    color: white;
+    width: 30px;
+    height: 30px;
+    font-weight: bold;
+}
